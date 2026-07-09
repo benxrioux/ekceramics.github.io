@@ -1,0 +1,30 @@
+# Ignore Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node/npm
+node_modules/
+
+# Build output
+bin/
+obj/
+
+# IDE helpers
+.vscode/
+
+# Local debug / logs
+git_status.txt
+push_output.txt
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# Image caches
+*.db
+
+# Other generated files
+*.log

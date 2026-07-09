@@ -1,0 +1,180 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: suisseIntlMedium;
+  src: url('Fonts/SuisseIntl-Medium.ttf');
+}
+
+@font-face {
+  font-family: ppEikoItalicLight;
+  src: url('Fonts/PPEiko-LightItalic.otf');
+}
+
+@font-face {
+  font-family: ppEikoThin;
+  src: url('Fonts/PPEiko-Thin.otf');
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12pt;
+  font-family: suisseIntlMedium;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+nav.navBar a {
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+}
+
+h1 {
+  font-family: suisseIntlMedium;
+  color: black;
+  font-weight: 100;
+  /* Responsive heading: scales between 32px and large display size */
+  font-size: clamp(32px, 8vw, 90pt);
+  line-height: 1;
+}
+
+h2 {
+  font-family: ppEikoItalicLight;
+  font-weight: 100;
+  /* Responsive subheading */
+  font-size: clamp(18px, 4vw, 30pt);
+  margin-top: 6px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.initials {
+  position: static;
+  margin-right: auto;
+  font-family: ppEikoThin;
+  font-size: 20pt;
+  color: black;
+  padding-left: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.row img {
+  width: 32%;
+  min-width: 180px;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  flex: 1 1 32%;
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  .row img {
+    width: 48%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .row {
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .row img {
+    width: 98%;
+    min-width: 80px;
+    max-width: 100%;
+  }
+}
+
+/* Additional small-screen adjustments for header and nav */
+@media (max-width: 700px) {
+  nav {
+    font-size: 11pt;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+  nav.navBar a {
+    padding: 10px;
+  }
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px;
+  }
+  .initials {
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+  .aboutPhoto img {
+    width: 40%;
+    height: auto;
+    padding-left: 0;
+    float: none;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .aboutPhotoText {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+.aboutPhoto img {
+  height: 25%;
+  width: 25%;
+  padding-left: 30px;
+  object-fit: cover;
+}
+
+h3 {
+  font-family: ppEikoThin;
+  font-weight: 100;
+  word-spacing: 0.1em;
+}
+
+.aboutPhotoText img {
+  float: left;
+  padding-right: 20px;
+}
+
+.aboutPhotoText {
+  padding-top: 100px;
+  padding-bottom: 500px;
+  padding-right: 20px;
+}
+
+.contact {
+  padding-left: 40px;
+}

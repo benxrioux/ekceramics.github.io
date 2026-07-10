@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: suisseIntlMedium;
   src: url('Fonts/SuisseIntl-Medium.ttf');
@@ -74,10 +78,9 @@ h2 {
 }
 
 .row {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 1400px;
   margin-left: auto;
@@ -88,32 +91,38 @@ h2 {
 }
 
 .row img {
-  width: 32%;
-  min-width: 180px;
-  max-width: 450px;
+  width: 100%;
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
-  flex: 1 1 32%;
   margin: 0;
+  background-color: #f0f0f0;
+  animation: fadeIn 0.4s ease-in;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
-@media (max-width: 1000px) {
-  .row img {
-    width: 48%;
-    min-width: 120px;
+
+.row img:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
+.aboutPhoto img {
+  animation: fadeIn 0.4s ease-in;
+}
 @media (max-width: 700px) {
   .row {
     gap: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-  .row img {
-    width: 98%;
-    min-width: 80px;
-    max-width: 100%;
   }
 }
 
@@ -128,8 +137,7 @@ h2 {
     padding: 10px;
   }
   .headerContainer {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 6px;
     padding: 12px;
   }
@@ -138,17 +146,74 @@ h2 {
     margin-bottom: 4px;
   }
   .aboutPhoto img {
-    width: 40%;
-    height: auto;
+    width: 70%;
+    max-width: 250px;
     padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
     float: none;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
   .aboutPhotoText {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 30px;
   }
+  .aboutPhotoText img {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 12px;
+  }
+  .contact {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+  }
+  .contact h3 {
+    font-size: 18pt;
+    margin-bottom: 16px;
+  }
+  .contact p {
+    font-size: 12pt;
+  }
+  footer {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+  }
+  .footer-title {
+    font-size: 14pt;
+  }
+  .footer-nav {
+    font-size: 11pt;
+  }
+}
+
+.aboutPhotoText {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 75px;
+  border-top: 1px solid #000;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.aboutPhotoText h2 {
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .aboutPhoto img {
@@ -156,25 +221,260 @@ h2 {
   width: 25%;
   padding-left: 30px;
   object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
   font-family: ppEikoThin;
   font-weight: 100;
   word-spacing: 0.1em;
+  margin: 12px 0;
+  line-height: 1.5;
 }
 
-.aboutPhotoText img {
-  float: left;
-  padding-right: 20px;
+.aboutPhotoText h3 {
+  font-family: ppEikoThin;
+  font-weight: 100;
+  font-size: 14pt;
+  line-height: 1.8;
+  margin: 16px 0;
 }
 
-.aboutPhotoText {
-  padding-top: 100px;
-  padding-bottom: 500px;
-  padding-right: 20px;
+.about-intro {
+  font-family: ppEikoItalicLight;
+  font-weight: 100;
+  font-size: 15pt;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+  color: #000;
 }
 
 .contact {
   padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #000;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24pt;
+}
+
+.contact p {
+  font-family: ppEikoThin;
+  font-weight: 100;
+  font-size: 14pt;
+  margin: 12px 0;
+  line-height: 1.8;
+}
+
+.contact a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  transition: opacity 0.2s ease;
+}
+
+.contact a:hover {
+  opacity: 0.6;
+}
+
+footer {
+  border-top: 1px solid #000;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer-title {
+  font-family: ppEikoItalicLight;
+  font-size: 16pt;
+  font-weight: 100;
+  margin: 0 0 6px 0;
+}
+
+.footer-location {
+  font-family: ppEikoThin;
+  font-size: 12pt;
+  font-weight: 100;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.footer-nav {
+  font-family: ppEikoThin;
+  font-size: 12pt;
+  font-weight: 100;
+  margin: 12px 0;
+  letter-spacing: 0.05em;
+}
+
+.footer-nav a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+/* Image Lightbox Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.674);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content img {
+  max-width: 90vw !important;
+  max-height: 85vh !important;
+  width: auto !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (min-width: 701px) {
+  .modal-content img {
+    max-width: 85vw !important;
+    max-height: 85vh !important;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
+}
+
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  transition: opacity 0.2s ease;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  opacity: 0.7;
+}
+
+.modal-prev {
+  left: 20px;
+}
+
+.modal-next {
+  right: 20px;
+}
+
+@media (max-width: 700px) {
+  .modal-prev,
+  .modal-next {
+    font-size: 24px;
+    padding: 10px 15px;
+  }
+  
+  .modal-close {
+    font-size: 30px;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.3s ease, background-color 0.2s ease;
+  opacity: 0.7;
+}
+
+#scrollToTopBtn:hover {
+  opacity: 1;
+  background-color: #333;
+}
+
+#scrollToTopBtn.show {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  #scrollToTopBtn {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
 }

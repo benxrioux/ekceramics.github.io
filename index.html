@@ -22,55 +22,172 @@
 <main>
     <section class="gallery" id="Ceramics">
         <div class="row">
-            <img src="Images/IMG_6717.jpg" alt="Ceramic piece 16">
-            <img src="Images/IMG_7273.jpg" alt="Ceramic piece 17">
-            <img src="Images/IMG_7341.jpg" alt="Ceramic piece 18">
+            <img loading="lazy" src="Images/IMG_6717.jpg" alt="Ceramic piece 16">
+            <img loading="lazy" src="Images/IMG_7273.jpg" alt="Ceramic piece 17">
+            <img loading="lazy" src="Images/IMG_7341.jpg" alt="Ceramic piece 18">
         </div>
          <div class="row">
-            <img src="Images/IMG_7342.jpg" alt="Ceramic piece 19">
-            <img src="Images/IMG_7048.jpg" alt="Ceramic piece 20">
-            <img src="Images/IMG_7357_square_natural.jpg" alt="Ceramic piece 21">
+            <img loading="lazy" src="Images/IMG_7342.jpg" alt="Ceramic piece 19">
+            <img loading="lazy" src="Images/IMG_7048.jpg" alt="Ceramic piece 20">
+            <img loading="lazy" src="Images/IMG_7357_square_natural.jpg" alt="Ceramic piece 21">
         </div>
         <div class="row">
-            <img src="Images/IMG_4423.jpeg" alt="Ceramic piece 1">
-            <img src="Images/IMG_4428.jpeg" alt="Ceramic piece 2">
-            <img src="Images/IMG_4543.jpeg" alt="Ceramic piece 3">
+            <img loading="lazy" src="Images/IMG_4423.jpeg" alt="Ceramic piece 1">
+            <img loading="lazy" src="Images/IMG_4428.jpeg" alt="Ceramic piece 2">
+            <img loading="lazy" src="Images/IMG_4543.jpeg" alt="Ceramic piece 3">
         </div>
         <div class="row">
-            <img src="Images/PS-March 24, 2024-43.JPG" alt="Ceramic piece 4">
-            <img src="Images/IMG_4447.jpeg" alt="Ceramic piece 5">
-            <img src="Images/IMG_7245.jpg" alt="Ceramic piece 6">
+            <img loading="lazy" src="Images/PS-March 24, 2024-43.JPG" alt="Ceramic piece 4">
+            <img loading="lazy" src="Images/IMG_4447.jpeg" alt="Ceramic piece 5">
+            <img loading="lazy" src="Images/IMG_7245.jpg" alt="Ceramic piece 6">
         </div>
         <div class="row">
-            <img src="Images/IMG_7076.jpg" alt="Ceramic piece 7">
-            <img src="Images/IMG_7047.jpg" alt="Ceramic piece 8">
-            <img src="Images/IMG_6741.jpg" alt="Ceramic piece 9">
+            <img loading="lazy" src="Images/IMG_7076.jpg" alt="Ceramic piece 7">
+            <img loading="lazy" src="Images/IMG_7047.jpg" alt="Ceramic piece 8">
+            <img loading="lazy" src="Images/IMG_6741.jpg" alt="Ceramic piece 9">
         </div>
         <div class="row">
-            <img src="Images/IMG_6734.jpg" alt="Ceramic piece 10">
-            <img src="Images/IMG_6690.JPG" alt="Ceramic piece 11">
-            <img src="Images/IMG_6608.jpg" alt="Ceramic piece 12">
+            <img loading="lazy" src="Images/IMG_6734.jpg" alt="Ceramic piece 10">
+            <img loading="lazy" src="Images/IMG_6690.JPG" alt="Ceramic piece 11">
+            <img loading="lazy" src="Images/IMG_6608.jpg" alt="Ceramic piece 12">
         </div>
         <div class="row">
-            <img src="Images/IMG_4614.jpeg" alt="Ceramic piece 13">
-            <img src="Images/IMG_4592.jpeg" alt="Ceramic piece 14">
-            <img src="Images/IMG_4543.jpeg" alt="Ceramic piece 15">
+            <img loading="lazy" src="Images/IMG_4614.jpeg" alt="Ceramic piece 13">
+            <img loading="lazy" src="Images/IMG_4592.jpeg" alt="Ceramic piece 14">
+            <img loading="lazy" src="Images/IMG_4543.jpeg" alt="Ceramic piece 15">
         </div>
     </section>
 
     <section class="aboutPhotoText" id="aboutPhotoText">
+        <h2>About</h2>
         <div class="aboutPhoto">
-            <img src="Images/IMG_0099.jpg" alt="Elisabeth Kalbfuss portrait">
-            <h3>Elisabeth Kalbfuss is a ceramic artist based in Toronto, Ontario, working out of Creative Clay Studio.</h3>
+            <img loading="lazy" src="Images/IMG_0099.jpg" alt="Elisabeth Kalbfuss portrait">
+            <p class="about-intro">Elisabeth Kalbfuss is a ceramic artist based in Toronto, Ontario, working out of Creative Clay Studio.</p>
             <h3>Originally from Montreal, she caught the pottery bug in the 1990s, taking classes at the Visual Arts Centre in Westmount. There, she was fortunate to learn from noted Quebec clay artists like Audrey Killoran, and Milan and Eva Lapka, who in addition to producing their own remarkable work, shared their passion and technical skills with hundreds of students, both hobbyists and budding professionals.</h3>
             <h3>After a long dormant period, Liz returned to the studio to rekindle her love affair with clay, creating both functional ware and decorative objects. Her inspiration comes from the clay itself, and the infinite possibilities different types of clay present both in structure and construction and then in its decoration. Each clay body, from grogs and stoneware to delicate porcelain demands its own range of technical skill to bring the artist’s vision alive.</h3>
         </div>
     </section>
 </main>
 
-<div class="contact" id="contact">
+<section class="contact" id="contact">
     <h3>Contact</h3>
-    <p>For inquiries, please dm on <a href="https://www.instagram.com/ekalbfuss/">Instagram</a></p>
+    <p><a href="mailto:ekalbfuss@gmail.com">ekalbfuss@gmail.com</a></p>
+    <p><a href="https://www.instagram.com/ekalbfuss/">Instagram</a></p>
+</section>
+
+<footer>
+    <p class="footer-title">Elisabeth Kalbfuss Ceramics</p>
+    <p class="footer-location">Based in Toronto, Ontario</p>
+    <p class="footer-nav">
+        <a href="#headerContainer">Home</a> | 
+        <a href="#Ceramics">Ceramics</a> | 
+        <a href="#aboutPhotoText">About</a> | 
+        <a href="#contact">Contact</a>
+    </p>
+ 
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn">&#8593;</button>
+
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <button class="modal-prev">&#10094;</button>
+        <img id="modalImage" src="" alt="">
+        <button class="modal-next">&#10095;</button>
     </div>
+</div>
+
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalClose = document.querySelector('.modal-close');
+  const modalPrev = document.querySelector('.modal-prev');
+  const modalNext = document.querySelector('.modal-next');
+  
+  // Get all gallery images
+  const allImages = Array.from(document.querySelectorAll('.row img, .aboutPhoto img'));
+  let currentImageIndex = 0;
+
+  // Open modal
+  allImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImage.src = img.src;
+      currentImageIndex = index;
+    });
+    img.style.cursor = 'pointer';
+  });
+
+  // Close modal
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Navigate to next image
+  modalNext.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex + 1) % allImages.length;
+    modalImage.src = allImages[currentImageIndex].src;
+  });
+
+  // Navigate to previous image
+  modalPrev.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+    modalImage.src = allImages[currentImageIndex].src;
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'flex') {
+      if (e.key === 'ArrowRight') modalNext.click();
+      if (e.key === 'ArrowLeft') modalPrev.click();
+      if (e.key === 'Escape') {
+        modal.style.display = 'none';
+      }
+    }
+  });
+
+  // Scroll to Top Button
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+  
+  scrollToTopBtn.addEventListener('click', () => {
+    const startPosition = window.pageYOffset;
+    const duration = 800; // 0.8 seconds - faster and smoother
+    const startTime = performance.now();
+    
+    function scroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth deceleration
+      const easeOutQuad = 1 - Math.pow(1 - progress, 2);
+      const newPosition = startPosition * (1 - easeOutQuad);
+      
+      window.scrollTo(0, newPosition);
+      
+      if (progress < 1) {
+        requestAnimationFrame(scroll);
+      }
+    }
+    
+    requestAnimationFrame(scroll);
+  });
+</script>
 </body>
 </html>
